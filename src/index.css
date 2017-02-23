@@ -13,5 +13,36 @@ html,body,.root{
 }
 .root{
   display: flex;
-  background: #f1f1f1
+  background: #f1f1f1;
+  flex-direction: column ;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+}
+.flex{
+  display: flex;
+}
+.flexDirRow{
+  flex-direction: row;/*水平*/
+}
+.flexDirCol{
+  flex-direction: column ;/*垂直*/
+}
+.flexItem {
+  flex:1;
+}
+.appbar{
+  display: flex;
+  height:50px;
+  color: #fff;
+  font-size: 18px;
+  background: orangered;
+  align-items: center;
+}
+.appbtn{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
 }
