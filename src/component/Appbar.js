@@ -3,7 +3,7 @@ import '../iconfont/material-icons.css';
 
 class Appbar extends PureComponent {
   onBack = ()=>{
-      window.history.go(-1);
+      this.props.goBack()
   }  
   render() {
     return (

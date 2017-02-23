@@ -7,12 +7,16 @@ import {
 import Index from './pages/Index';
 import Appbar from './component/Appbar'
 
-const Detail = ({ match }) => (
-  <div className="root">
-    <Appbar title='详情' />
-    <h2>{match.params.id}</h2>
-  </div>
-)
+class Detail extends PureComponent {
+  render() {
+    return (
+      <div className="root">
+        <Appbar title='详情' {...this.props} />
+        <h2>{this.props.match.params.id}</h2>
+      </div>
+    )
+  }
+}
 
 class App extends PureComponent {
   render() {
