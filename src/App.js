@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-  BrowserRouter,
+  HashRouter,
   Route,
   Switch
 } from 'react-router-dom'
@@ -21,14 +21,14 @@ class Detail extends PureComponent {
 class App extends PureComponent {
   render() {
     return (
-      <BrowserRouter basename='/ReactSPA/build'>
+      <HashRouter>
         <div className='root'>
           <Switch>
             <Route path="/detail/:id" component={Detail} />
             <Route path="/" component={Index} />
           </Switch>
         </div>
-      </BrowserRouter>
+      </HashRouter >
     )
   }
 }
