@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import {
   BrowserRouter,
   Route,
-  Redirect
+  Switch
 } from 'react-router-dom'
 import Index from './pages/Index';
 import Appbar from './component/Appbar'
@@ -23,11 +23,10 @@ class App extends PureComponent {
     return (
       <BrowserRouter>
         <div className='root'>
-          {
-            (window.location.pathname==='/')&&<Redirect push  to="/index" />
-          }
-          <Route path="/index" component={Index} />
-          <Route path="/detail/:id" component={Detail} />
+          <Switch>
+            <Route path="/detail/:id" component={Detail} />
+            <Route path="/" component={Index} />
+          </Switch>
         </div>
       </BrowserRouter>
     )

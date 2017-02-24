@@ -3,7 +3,7 @@ import Banner from '../component/Banner';
 import '../iconfont/material-icons.css';
 import './Home.css';
 import logo from '../img/logo_m.png';
-import API from '../api';
+import {getLatestNews} from '../api';
 
 class Home extends PureComponent {
   state = {
@@ -11,7 +11,7 @@ class Home extends PureComponent {
     isLoaded:false
   };
   getLatestNews = ()=>{
-      fetch(API.getLatestNews(),{
+      fetch(getLatestNews(),{
           method: 'GET',
           mode: 'cors',
       })
@@ -43,7 +43,7 @@ class Home extends PureComponent {
             <img className="logo" src={logo} alt='logo' />
           </div>
           <Banner></Banner>
-          <h2>5655</h2>
+          <h2>565556565</h2>
       </div>
     )
   }

@@ -41,20 +41,19 @@ class NavItem extends PureComponent {
 
 class Index extends PureComponent {
   render(){
-    let {match} = this.props;
     return(
       <div className='root flexDirCol'>
         <div className='flexItem'>
-          <Route exact path={match.path} component={Home}/>
-          <Route path={`${match.url}/about`} component={About}/>
-          <Route path={`${match.url}/topics`} component={Topics}/>
-          <Route path={`${match.url}/user`} component={User}/>
+          <Route exact path='/' component={Home}/>
+          <Route path='/about' component={About}/>
+          <Route path='/topics' component={Topics}/>
+          <Route path='/user' component={User}/>
         </div>
         <nav className='nav'>
-          <NavItem exact={true} to={`${match.path}`} name="主页" icon="home" />
-          <NavItem exact={false} to={`${match.url}/about`} name="电视" icon="live_tv" />
-          <NavItem exact={false} to={`${match.url}/topics`} name="影视" icon="movie" />
-          <NavItem exact={false} to={`${match.url}/user`} name="我的" icon="person" />
+          <NavItem exact={true} to='/' name="主页" icon="home" />
+          <NavItem exact={false} to='/about' name="电视" icon="live_tv" />
+          <NavItem exact={false} to='/topics' name="影视" icon="movie" />
+          <NavItem exact={false} to='/user' name="我的" icon="person" />
         </nav>
       </div>
     )
