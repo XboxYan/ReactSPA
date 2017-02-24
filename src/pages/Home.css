@@ -1,0 +1,10 @@
+.homeHeader{
+  height: 50px;
+  background: orangered;
+  align-items: center;
+}
+.logo{
+  height: 40px;
+  object-fit: cover;
+  margin-left: 10px;
+}

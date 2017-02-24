@@ -1,22 +1,15 @@
-const _baseUrl = 'http://vuetest-001-site1.btempurl.com/api/music'
-const _baseUrl2 = 'https://api.imjad.cn/cloudmusic'
+const API_BASE = 'http://news-at.zhihu.com/api';
+const API_V4 = API_BASE + '/4';
+const API_V3 = API_BASE + '/3';
+const API_NEWS = API_V4 + '/news';
+const API_STORY = API_V4 + '/story';
 export default {
-  getPlayListByWhere (cat, order, offset, total, limit) {
-    return _baseUrl + '/topPlaylist?cat=' + cat + '&order=' + order + '&offset=' + offset + '&total=' + total + '&limit=' + limit
+  /*获取最新日报*/
+  getLatestNews() {
+    return API_NEWS + '/latest';
   },
-  getLrc (id) {
-    return _baseUrl2 + '?type=lyric&id=' + id
+  /*获取日报详情*/
+  getNewsDetail( newsId ) {
+    return API_NEWS + '/' + newsId;
   },
-  getSong (id) {
-    return _baseUrl2 + '?id=' + id
-  },
-  getPlayListDetail (id) {
-    return _baseUrl2 + '?type=playlist&id=' + id
-  },
-  getMv (id) {
-    return _baseUrl2 + '?type=mv&id=' + id
-  },
-  search (words) {
-    return _baseUrl2 + '?type=search&s=' + words
-  }
 }

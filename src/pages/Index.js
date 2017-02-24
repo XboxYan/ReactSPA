@@ -5,14 +5,7 @@ import {
   NavLink
 } from 'react-router-dom'
 import './App.css';
-import '../iconfont/material-icons.css';
-
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-    <Link to='/detail/333'>333</Link>
-  </div>
-)
+import Home from './Home';
 
 const About = () => (
   <div>
