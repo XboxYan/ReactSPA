@@ -21,7 +21,7 @@ class Detail extends PureComponent {
 class App extends PureComponent {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename='/ReactSPA/build'>
         <div className='root'>
           <Switch>
             <Route path="/detail/:id" component={Detail} />
