@@ -5,15 +5,16 @@ import {
   Switch
 } from 'react-router-dom'
 import Index from './pages/Index';
-import Appbar from './component/Appbar'
+import Appbar from './component/Appbar';
+import AnimatePage from './component/AnimatePage';
 
 class Detail extends PureComponent {
   render() {
     return (
-      <div className="root">
-        <Appbar title='详情' {...this.props} />
-        <h2>{this.props.match.params.id}</h2>
-      </div>
+      <AnimatePage>
+          <Appbar title='详情' {...this.props} />
+          <h2>{this.props.match.params.id}</h2>    
+      </AnimatePage>
     )
   }
 }

@@ -1,9 +1,12 @@
 {
-  "name": "ReactSPA",
+  "name": "reactapp",
   "version": "0.1.0",
   "homepage": "http://www.xboxyan.com/ReactSPA/build",
   "private": true,
+  "proxy": "http://news-at.zhihu.com/api",
   "devDependencies": {
+    "express": "^4.14.1",
+    "http-proxy-middleware": "^0.17.3",
     "react-scripts": "0.9.0"
   },
   "dependencies": {

@@ -12,8 +12,7 @@ class Home extends PureComponent {
   };
   getLatestNews = ()=>{
       fetch(getLatestNews(),{
-          method: 'GET',
-          mode: 'cors',
+          accept: 'application/json',
       })
       .then((response) => {
           console.log(response)
