@@ -11,17 +11,14 @@ class Home extends PureComponent {
     isLoaded:false
   };
   getLatestNews = ()=>{
-      fetch(getLatestNews(),{
-          accept: 'application/json',
-      })
+      fetch('/news/latest')
       .then((response) => {
-          console.log(response)
         if (response.ok) {
           return response.json()
         }
       })
       .then((responseData) => {
-          
+        console.log(responseData)  
         this.setState({
           isLoaded: true,
         })
@@ -32,9 +29,9 @@ class Home extends PureComponent {
         })
       });
   }  
-  componentDidMount(){
+  componentDidMount() {
     this.getLatestNews();
-  } 
+  }
   render() {
     return (
       <div className="root">
